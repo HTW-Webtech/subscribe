@@ -2,7 +2,7 @@
 
 Es soll eine Seite entwickelt werden, über die interessierte Besucher ihren Namen und ihre E-Mail-Adresse hinterlassen können, um später über den Start unseres Produktes informiert zu werden. Zudem soll auch eine Checkbox vorhanden sein, um anzugeben, ob auch gleich ein Account angelegt werden soll, oder nicht. Die Daten werden intern in einer CSV-Datei gespeichert.
 
-![Mockup](https://beier.f4.htw-berlin.de/assets/images/Subscribe.png)
+![Mockup](Subscribe.png)
 
 ## Einstieg
 
