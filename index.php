@@ -11,7 +11,7 @@
 
       $username = filter_var($_POST['username'], FILTER_SANITIZE_SPECIAL_CHARS);
       $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-      $create_account = (int) filter_var($_POST['create_account'], FILTER_VALIDATE_BOOLEAN);
+      $create_account = (int) isset($_POST['create_account']);
       $is_email_valid = $email && filter_var($email, FILTER_VALIDATE_EMAIL);
 
       if (!$username) $username_class .= ' has-error';
@@ -23,13 +23,10 @@
       }
 
       if ($username && $is_email_valid) {
-         $content = "$username, $email, $create_account, " . time();
-
          $file = fopen($filename, 'a');
          $values = array($username, $email, $create_account, time());
          fputcsv($file, $values);
          fclose($file);
-
          $success = true;
       }
 
